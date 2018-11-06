@@ -1,3 +1,3 @@
 # SharewareDeals
 
-Shareware.Deals JS Code
+Shareware.Deals JS Code - You are not allowed to copy.
