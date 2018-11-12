@@ -1,12 +1,70 @@
 // Buttons and Table Codes - Do Not Copy!
 
+function ShowSweet(title, type, width, html){ if (title == 'No Coupon') {title =''}
+    swal({
+        title: title,
+        type: type,
+        width: widthsweet,
+        html: snotetext,
+        showCloseButton: true,
+        allowOutsideClick: false,
+        confirmButtonText: 'Close',
+        confirmButtonColor: '#8cd4f5'
+    })
+    
+}
+
+var snotetext = ''; var _0x89a3x11 = '<i class="fa fa-cart-plus fa-lg" aria-hidden="true"></i>';
+    var _0x89a3x12 = '<i class="fa fa-hand-o-down fa-lg mif-ani-float mif-ani-fast" aria-hidden="true"></i>';
+    var _0x89a3x13 = '',
+        _0x89a3x14 = '',
+        _0x89a3x15 = '',
+        _0x89a3x16 = '',
+        _0x89a3x17 = '',
+        _0x89a3x18 = '',
+        _0x89a3x19 = '  |  ',
+        _0x89a3x1a = '<br />',
+        _0x89a3x1b = '<button class="buysweetbutton">Buy Now!</button>', noCoupon = false;
+        
+        
+var clipboard = new ClipboardJS('.copycb');
+
+clipboard.on('success', function(e) {
+    ShowSweet('Coupon copied to your clipboard!', 'success', widthsweet, snotetext);
+    console.info('Action:', e.action);
+    console.info('Text:', e.text);
+    console.info('Trigger:', e.trigger);
+    e.clearSelection();
+});
+
+clipboard.on('error', function(e) {
+    ShowSweet('Please Copy Coupon Manually!', 'info', widthsweet, snotetext);
+    console.error('Action:', e.action);
+    console.error('Trigger:', e.trigger);
+});
+
 function AlertCopyCustom(_0x89a3x5, _0x89a3x6, _0x89a3x7, _0x89a3x8, _0x89a3x9, _0x89a3xa, _0x89a3xb, _0x89a3xc, _0x89a3xd, _0x89a3xe, _0x89a3xf, _0x89a3x10) {
+   // Reset Var
+   
+   _0x89a3x13 = '',
+        _0x89a3x14 = '',
+        _0x89a3x15 = '',
+        _0x89a3x16 = '',
+        _0x89a3x17 = '',
+        _0x89a3x18 = ''; 
+   
+   
+   
    
     if (top['location']['href']['indexOf']('megaleechers') < 0 && top['location']['href']['indexOf']('//shareware.deals') < 0) {
         _0x89a3x5 = 'Megaleechers.com'
     };
+    
+    if (_0x89a3x5['indexOf']('No Coupon') > -1) {noCoupon = true} else noCoupon = false;
+    
+    
     snotetext = '<span class="couponbox">' + _0x89a3x5 + '</span>' + _0x89a3x1a + _0x89a3x1a;
-    if (_0x89a3x5['indexOf']('No Coupon') > -1) {
+    if (noCoupon) {
         snotetext = snotetext + '<div class="couponnotice">' + _0x89a3x12 + ' <b>Your discount will be automatically applied at checkout</b> ' + _0x89a3x12 + '</div>' + _0x89a3x1a
     } else {
         var _0x89a3x1c;
@@ -33,6 +91,11 @@ function AlertCopyCustom(_0x89a3x5, _0x89a3x6, _0x89a3x7, _0x89a3x8, _0x89a3x9, 
     snotetext = snotetext + _0x89a3x13 + _0x89a3x14 + _0x89a3x15 + _0x89a3x16 + _0x89a3x17;
     if (!ismobilerequest) {
         snotetext = snotetext + _0x89a3x1a + '<br /><div class="d-divider"></div><div class="minorheadsize"><i class="fa fa-question-circle-o" aria-hidden="true"></i> Need Help?!</div><span class="helpnotice">Contact a <a class="simulate" onclick="Chatra(\'openChat\', true)">Live Agent</a> or alternatively click on the live chat widget on the bottom-left corner. We will be happy to assist you!</span>'
+    }
+    
+    if (noCoupon)
+    {
+        ShowSweet('No Coupon', 'success', widthsweet, snotetext);
     }
 }
 
