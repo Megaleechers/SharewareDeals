@@ -41,7 +41,7 @@ function AlertCopyCustom(_0x89a3x5, _0x89a3x6, _0x89a3x7, _0x89a3x8, _0x89a3x9, 
 // Table
 $(document).ready(function(){
          var distable = $('#searchtable').DataTable({
-        "ajax": 'https://shareware.deals/ajax.txt',
+        "ajax": '',
         "pageLength": 100,
          //'sDom': 't' show only the table
          //"paging":   false,
