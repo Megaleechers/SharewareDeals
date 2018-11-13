@@ -1,6 +1,6 @@
 // Buttons and Table Codes - Do Not Copy!
 
-function ShowSweet(title, type, width, html){ if (title == 'No Coupon') {title =''}
+function ShowSweet(title, type, width, html){ if (title == 'No Coupon') {title=null}
     swal({
         title: title,
         type: type,
@@ -53,9 +53,6 @@ function AlertCopyCustom(_0x89a3x5, _0x89a3x6, _0x89a3x7, _0x89a3x8, _0x89a3x9, 
         _0x89a3x17 = '',
         _0x89a3x18 = ''; 
    
-   
-   
-   
     if (top['location']['href']['indexOf']('megaleechers') < 0 && top['location']['href']['indexOf']('//shareware.deals') < 0) {
         _0x89a3x5 = 'Megaleechers.com'
     };
@@ -100,11 +97,10 @@ function AlertCopyCustom(_0x89a3x5, _0x89a3x6, _0x89a3x7, _0x89a3x8, _0x89a3x9, 
 }
 
 
-
 // Table
 $(document).ready(function(){
          var distable = $('#searchtable').DataTable({
-        "ajax": '',
+        "ajax": '../ajax.txt',
         "pageLength": 100,
          //'sDom': 't' show only the table
          //"paging":   false,
